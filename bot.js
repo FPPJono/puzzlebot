@@ -1,7 +1,8 @@
+const commando = require('discord.js-commando')
+const client = new commando.Client();
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
-
+bot.registry.registerGroup('commands', 'Commands');
+bot.registry.registerCommandsIn(__dirname + "/commands")
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -12,7 +13,7 @@ client.on('message', message => {
     } else
     if (message.content === 'hint') {
         message.reply('this should work eventually :P');
-    }
+    } else
 });
 
 client.login(process.env.BOT_TOKEN);
