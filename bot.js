@@ -11,7 +11,13 @@ client.on('message', message => {
     if (message.content === 'mytime') {
         message.reply('your time is');
     } else
+    if (message.content === 'Mytime') {
+        message.reply('your time is');
+    } else
     if (message.content === 'hint') {
+        message.reply('this should work eventually :P');
+    } else
+    if (message.content === 'Hint') {
         message.reply('this should work eventually :P');
     } else
 });
