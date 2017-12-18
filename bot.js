@@ -1,8 +1,6 @@
 const commando = require('discord.js-commando')
 const client = new commando.Client();
 
-bot.registry.registerGroup('commands', 'Commands');
-bot.registry.registerCommandsIn(__dirname)
 client.on('ready', () => {
     console.log('I am ready!');
 });
