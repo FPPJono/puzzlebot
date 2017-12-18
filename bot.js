@@ -9,7 +9,13 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
-  	}
+  	} else
+    if (message.content === 'mytime') {
+        message.reply('your time is');
+    } else
+    if (message.content === 'hint') {
+        message.reply();
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
