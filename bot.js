@@ -1,23 +1,27 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
+const PREFIX = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'mytime') {
+bot.on('message', message => {
+    if (message.content.toLowerCase === 'mytime') {
         message.reply('your time is');
     } else
-    if (message.content === 'Mytime') {
-        message.reply('your time is');
-    } else
-    if (message.content === 'hint') {
+    if (message.content.toLowerCase === 'hint') {
         message.reply('this should work eventually :P');
     } else
-    if (message.content === 'Hint') {
-        message.reply('this should work eventually :P');
-    } else
+    if (!message.content.startsWith(PREFIX)) return;
+    
+    var args = message.content.substring(PREFIX.length).split(" ");
+    
+    switch (args[0].toLowerCase()) {
+        case "scavengerhunt":
+            member.addRole(member.guild.roles.find("name", "scavengerhunt"))
+            break;
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
