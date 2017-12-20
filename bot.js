@@ -44,6 +44,8 @@ bot.on('message', message => {
         case "hint"
             message.author.sendMessage("this will work eventually :P")
             break;
+    }
+    switch (args[0].toLowerCase()) {
         case "011101110110100101101110011001000110111101110111"
             message.author.sendMessage("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
             console.log(message.author.username + " just completed level 3");
@@ -55,7 +57,7 @@ bot.on('message', message => {
         case "01110000011000010111001101110011011000010110011101100101001101010011001100110100"
             message.author.sendMessage("")
             console.log(message.author.username + " just completed level 5");
-            break;
+            break;        
     }
 });
 
