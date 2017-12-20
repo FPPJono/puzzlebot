@@ -14,9 +14,6 @@ bot.on('message', message => {
     if (message.content.toLowerCase === 'hint') {
         message.reply('this should work eventually :P');
     } else
-    if (message.content.startsWith(PREFIX + "setGame")) {
-
-    }
     if (!message.content.startsWith(PREFIX)) return;
     
     var args = message.content.substring(PREFIX.length).split(" ");
