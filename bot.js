@@ -88,7 +88,8 @@ bot.on('message', message => {
             message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
             console.log(message.author.username + "just completed level 7");
             break;
-        case 
+        case "apple":
+            break;
     }
 });
 
