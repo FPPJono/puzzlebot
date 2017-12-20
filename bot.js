@@ -41,7 +41,7 @@ bot.on('message', message => {
             message.author.sendMessage("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
             console.log(message.author.username + " just completed level 2");
             break;
-        case "hint"
+        case "hint":
             message.author.sendMessage("this will work eventually :P")
             break;
     }
