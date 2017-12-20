@@ -46,15 +46,15 @@ bot.on('message', message => {
             break;
     }
     switch (args[0].toLowerCase()) {
-        case "011101110110100101101110011001000110111101110111"
+        case "011101110110100101101110011001000110111101110111":
             message.author.sendMessage("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
             console.log(message.author.username + " just completed level 3");
             break;
-        case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110"
+        case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110":
             message.author.sendMessage("picturewillgohere")
             console.log(message.author.username + " just completed level 4");
             break;
-        case "01110000011000010111001101110011011000010110011101100101001101010011001100110100"
+        case "01110000011000010111001101110011011000010110011101100101001101010011001100110100":
             message.author.sendMessage("")
             console.log(message.author.username + " just completed level 5");
             break;        
