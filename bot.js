@@ -4,6 +4,7 @@ const PREFIX = "!";
 
 bot.on('ready', () => {
     console.log('I am ready!');
+    bot.user.setGame('endysis')
 });
 
 bot.on('message', message => {
@@ -86,16 +87,10 @@ bot.on('message', message => {
     }
     switch (args[0].toLowerCase()) {
         case "01110011011101000111001001100001011101110110001001100101011100100111001001111001":
-            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n I want to play a game")
+            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
             console.log(message.author.username + "just completed level 7");
             break;
-        case "setgame":
-            if (message.author.id !== "270017125815418901"){
-                return message.reply("sorry, that command is only available for this bot's creator ")
-            }
-            let args = message.content.split(" ").slice(1);
-            let game = args.join(" ")
-            bot.user.setGame(game)
+        case 
     }
 });
 
