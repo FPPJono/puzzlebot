@@ -4,7 +4,7 @@ const PREFIX = "!";
 
 bot.on('ready', () => {
     console.log('I am ready!')
-    bot.user.setGame('endysis')
+    jda.getPresence().setGame(Game.of("message"));
 });
 
 bot.on('message', message => {
