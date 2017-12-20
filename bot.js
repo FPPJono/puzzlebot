@@ -1,13 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "!";
-
-bot.on('ready', () => {
-    console.log('I am ready!');
-});jkm 
     
-    var args = message.content.substring(PREFIX.length).split(" ");
-    
+    var args = message.content.substring(PREFIX.length).split(" ");    
     switch (args[0].toLowerCase()) {
         case "scavengerhunt":
             message.author.addRole(message.author.guild.roles.find("name", "scavengerhunt"))
@@ -81,7 +76,7 @@ bot.on('ready', () => {
             let game = args.join(" ")
             bot.user.setGame(game)
     }
-});
+
 
 bot.login(process.env.BOT_TOKEN);
 
