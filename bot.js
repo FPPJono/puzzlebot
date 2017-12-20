@@ -52,13 +52,19 @@ bot.on('message', message => {
             break;
         case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110":
             message.author.sendMessage("hm, this should be interesting", {
-                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
+                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png"
             });
             console.log(message.author.username + " just completed level 4");
             break;
         case "010101000100100001000101010101000101001001010101010001010100001001000001010000110100111101001110":
             message.author.sendMessage("hm, this should be interesting", {
-                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
+                "embed": {
+                    title: 'passage534.png'
+                    "url": "https://github.com/"
+                    "image": {
+                    "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png"
+                    }
+                }
             });
             console.log(message.author.username + " just completed level 4");
             break;
