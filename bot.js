@@ -4,19 +4,7 @@ const PREFIX = "!";
 
 bot.on('ready', () => {
     console.log('I am ready!');
-});
-
-bot.on('message', message => {
-    if (message.content.toLowerCase === 'mytime') {
-        message.reply('your time is');
-    } else
-    if (message.content.toLowerCase === 'hint') {
-        message.reply('this should work eventually :P');
-    } else
-    if (message.content.startsWith(PREFIX + "setGame")) {
-
-    }
-    if (!message.content.startsWith(PREFIX)) return;
+});jkm 
     
     var args = message.content.substring(PREFIX.length).split(" ");
     
@@ -50,11 +38,7 @@ bot.on('message', message => {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393114450606948352/passage534.png"
-                    },
-                    "author": {
-                        "name": "welcome to level 5",
-                        "icon_url": "https://github.com/FPPJono/puzzlebot/blob/master/puzzlebotbaconserver.jpg?raw=true"
-                        }
+                    }
                 }
             });
             console.log(message.author.username + " just completed level 4");
@@ -85,11 +69,11 @@ bot.on('message', message => {
             break;
     }
     switch (args[0].toLowerCase()) {
-        case "01110011011101000111001001100001011101110110001001100101011100100111001001111001"
-            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n I want to play a game")
+        case "01110011011101000111001001100001011101110110001001100101011100100111001001111001":
+            message.author.sendMessage("congrats! you solved the hardest puzzle. heres an easy one as a reward. **__I want to play a game__**")
             console.log(message.author.username + "just completed level 7");
             break;
-        case "setgame"
+        case "setgame":
             if (message.author.id !== "270017125815418901"){
                 return message.reply("sorry, that command is only available for this bot's creator ")
             }
