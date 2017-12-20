@@ -62,7 +62,7 @@ bot.on('message', message => {
                     title: 'passage534.png',
                     url: "https://github.com/",
                     "image": {
-                    "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png",
+                    "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true",
                     }
                 }
             });
