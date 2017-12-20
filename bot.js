@@ -86,7 +86,7 @@ bot.on('message', message => {
     }
     switch (args[0].toLowerCase()) {
         case "01110011011101000111001001100001011101110110001001100101011100100111001001111001"
-            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n **__I want to play a game__**")
+            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n I want to play a game")
             console.log(message.author.username + "just completed level 7");
             break;
         case "setgame"
