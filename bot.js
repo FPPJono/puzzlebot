@@ -15,7 +15,7 @@ bot.on('message', message => {
         message.reply('this should work eventually :P');
     } else
     if (!message.content.startsWith(PREFIX)) return;
-}
+});
     
     var args = message.content.substring(PREFIX.length).split(" ");
     
