@@ -41,18 +41,6 @@ bot.on('message', message => {
             msg.author.sendMessage("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
             console.log(msg.author.username + " just completed level 2")
             break;
-        case "011101110110100101101110011001000110111101110111"
-            msg.author.sendMessage("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
-            console.log(msg.author.username + " just completed level 3")
-            break;
-        case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110"
-            msg.author.sendMessage("picturewillgohere")
-            console.log(msg.author.username + " just completed level 4")
-            break;
-        case "01110000011000010111001101110011011000010110011101100101001101010011001100110100"
-            msg.author.sendMessage("")
-            console.log(msg.author.username + " just completed level 5")
-            break;
     }
 });
 
@@ -60,3 +48,15 @@ client.login(process.env.BOT_TOKEN);
 
     
     //member.addRole(member.guild.roles.find("name", "INSERTNAMEOFROLE"))
+//        case "011101110110100101101110011001000110111101110111"
+           // msg.author.sendMessage("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
+           // console.log(msg.author.username + " just completed level 3")
+           // break;
+     //   case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110"
+        //    msg.author.sendMessage("picturewillgohere")
+        //    console.log(msg.author.username + " just completed level 4")
+        //    break;
+  //      case "01110000011000010111001101110011011000010110011101100101001101010011001100110100"
+        //   msg.author.sendMessage("")
+        //    console.log(msg.author.username + " just completed level 5")
+         //   break;
