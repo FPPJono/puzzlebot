@@ -4,7 +4,7 @@ const PREFIX = "!";
 
 bot.on('ready', () => {
     console.log('I am ready!');
-    bot.user.setPresence({ status: 'online', game: { name: 'endysis' } });
+    bot.setPlayingGame('endysis')
 })
 
 bot.on('message', message => {
