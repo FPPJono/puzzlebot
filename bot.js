@@ -54,6 +54,10 @@ bot.on('message', message => {
             message.author.sendMessage("picturewillgohere")
             console.log(message.author.username + " just completed level 4");
             break;
+        case "010101000100100001000101010101000101001001010101010001010100001001000001010000110100111101001110":
+            message.author.sendMessage("picturewillgohere")
+            console.log(message.author.username + " just completed level 4");
+            break;
         case "01110000011000010111001101110011011000010110011101100101001101010011001100110100":
             message.author.sendMessage("")
             console.log(message.author.username + " just completed level 5");
