@@ -61,7 +61,6 @@ bot.on('message', message => {
                 files: [
                     "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
                 ]
-                }
             });
             console.log(message.author.username + " just completed level 4");
             break;
