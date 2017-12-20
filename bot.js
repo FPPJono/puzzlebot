@@ -52,12 +52,14 @@ bot.on('message', message => {
             break;
         case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110":
             message.author.sendMessage("hm, this should be interesting", {
-                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png"
+                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
             });
             console.log(message.author.username + " just completed level 4");
             break;
         case "010101000100100001000101010101000101001001010101010001010100001001000001010000110100111101001110":
-            message.author.sendMessage("picturewillgohere")
+            message.author.sendMessage("hm, this should be interesting", {
+                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
+            });
             console.log(message.author.username + " just completed level 4");
             break;
         case "01110000011000010111001101110011011000010110011101100101001101010011001100110100":
