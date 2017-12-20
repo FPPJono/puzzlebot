@@ -4,7 +4,7 @@ const PREFIX = "!";
 
 bot.on('ready', () => {
     console.log('I am ready!');
-    bot.setGame('endysis');
+    bot.user.setGame('endysis');
 })
 
 bot.on('message', message => {
