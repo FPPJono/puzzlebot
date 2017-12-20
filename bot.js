@@ -52,7 +52,15 @@ bot.on('message', message => {
             break;
         case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110":
             message.author.sendMessage("hm, this should be interesting", {
-                file: "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png"
+                "embed": {
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393114450606948352/passage534.png"
+                    },
+                    "author": {
+                        "name": "welcome to level 5",
+                        "icon_url": "https://github.com/FPPJono/puzzlebot/blob/master/puzzlebotbaconserver.jpg?raw=true"
+                        }
+                }
             });
             console.log(message.author.username + " just completed level 4");
             break;
@@ -60,7 +68,7 @@ bot.on('message', message => {
             message.author.sendMessage("hm, this should be interesting", {
                 "embed": {
                     "image": {
-                        "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png?raw=true"
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393114450606948352/passage534.png"
                     },
                     "author": {
                         "name": "welcome to level 5",
