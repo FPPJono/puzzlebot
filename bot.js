@@ -34,7 +34,7 @@ bot.on('message', message => {
             console.log(message.author.username + " just began the hunt");
             break;
         case "0101010001001010010011100100011101001000":
-            message.author.sendMessage("https://www.youtube.com/watch?v=Hb0Ghb1RQ7M")
+            message.author.sendMessage("good job! here's level 2\nhttps://www.youtube.com/watch?v=Hb0Ghb1RQ7M")
             console.log(message.author.username + " just completed level 1");
             break;
         case "011101000110100001100101011100000110100101100011011010110110110001100101011001000110100101100100001110010011000100110001":
