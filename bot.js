@@ -30,7 +30,7 @@ bot.on('message', message => {
             message.author.addRole(message.author.guild.roles.find("name", "scavengerhunt"))
             break;
         case "start":
-            message.author.sendMessage("I see you've decided to join my hunt. this will be *very* easy, good luck!\n**/p/BcyyoI7F8DN/**")
+            message.author.sendMessage("Ig see you've decided to join my hunt. this will be *very* easy, good luck!\n**/p/BcyyoI7F8DN/**")
             console.log(message.author.username + " just began the hunt");
             break;
         case "0101010001001010010011100100011101001000":
