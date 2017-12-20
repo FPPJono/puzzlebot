@@ -59,10 +59,10 @@ bot.on('message', message => {
         case "010101000100100001000101010101000101001001010101010001010100001001000001010000110100111101001110":
             message.author.sendMessage("hm, this should be interesting", {
                 "embed": {
-                    title: 'passage534.png'
-                    url: "https://github.com/"
+                    title: 'passage534.png',
+                    url: "https://github.com/",
                     "image": {
-                    "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png"
+                    "url": "https://github.com/FPPJono/puzzlebot/blob/master/passage534.png",
                     }
                 }
             });
