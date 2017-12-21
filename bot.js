@@ -5,6 +5,7 @@ var fs = require('fs');
 
 
 var userData = JSON.parse(fs.readFileSync('userData.json', 'utf8'));
+var currentLevel = JSON.parse(fs.readFileSync('hintsLeft', 'utf8'));
 
 bot.on('ready', () => {
     console.log('I am ready!')
@@ -32,21 +33,21 @@ bot.on('message', message => {
         case "start":
             message.author.send("Ig see you've decided to join my hunt. this will be *very* easy, good luck!\n**/p/BcyyoI7F8DN/**")
             console.log(message.author.username + " just began the hunt");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 1
             }
             break;
         case "0101010001001010010011100100011101001000":
             message.author.send("good job! here's level 2\nhttps://www.youtube.com/watch?v=Hb0Ghb1RQ7M")
             console.log(message.author.username + " just completed level 1");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 2
             }
             break;
         case "011101000110100001100101011100000110100101100011011010110110110001100101011001000110100101100100001110010011000100110001":
             message.author.send("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
             console.log(message.author.username + " just completed level 2");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 3
             }
             break;
@@ -55,7 +56,7 @@ bot.on('message', message => {
         case "011101110110100101101110011001000110111101110111":
             message.author.send("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
             console.log(message.author.username + " just completed level 3");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 4
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -69,7 +70,7 @@ bot.on('message', message => {
                 }
             });
             console.log(message.author.username + " just completed level 4");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 5
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -83,7 +84,7 @@ bot.on('message', message => {
                 }
             });
             console.log(message.author.username + " just completed level 4");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 5
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -91,7 +92,7 @@ bot.on('message', message => {
         case "01110000011000010111001101110011011000010110011101100101001101010011001100110100":
             message.author.send("aaa aaaa abbb baa aaa ab")
             console.log(message.author.username + " just completed level 5");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 6
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -105,7 +106,7 @@ bot.on('message', message => {
                 }
             });
             console.log(message.author.username + " just completed level 6");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 7
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -115,7 +116,7 @@ bot.on('message', message => {
         case "01110011011101000111001001100001011101110110001001100101011100100111001001111001":
             message.author.send ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
             console.log(message.author.username + " just completed level 7");
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 8
             }
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -125,7 +126,7 @@ bot.on('message', message => {
                 "files": ["https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip"]
             });
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 9
             }
             console.log(message.author.username + " just completed level 8")
@@ -138,7 +139,7 @@ bot.on('message', message => {
                     }
                 }
             });
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 10
             }
             console.log(message.author.username + " just completed level 9")
@@ -155,7 +156,7 @@ bot.on('message', message => {
                     }
                 }
             });
-            userData[sender.id] = {
+            hintsLeft[sender.id] = {
                 currentLevel: 7
             }
             console.log(message.author.username + " just completed level 6");
@@ -169,23 +170,27 @@ bot.on('message', message => {
             if (!userData[sender.id]) userData[sender.id] = {
                 hintsLeft: 3
             }
+            if (!hintsLeft[sender.id]) hintsLeft[sender.id] = {
+                currentLevel: 1
+            }
             userData[sender.id].hintsLeft--;
             if (userData[sender.id].hintsLeft >= 0) {
-                if (userData[sender.id].currentLevel == 1) {
+                if (hintsLeft[sender.id].currentLevel == 1) {
                     message.author.send('**cough** *insta*__hexa__ **cough**')
                 }else
-                if (userData[sender.id].currentLevel == 2) {
+                if (hintsLeft[sender.id].currentLevel == 2) {
                     message.author.send('if I remember correctly, __socialblade__ may be helpful')
                 }else
-                if (userData[sender.id].currentLevel == 3) {
+                if (hintsLeft[sender.id].currentLevel == 3) {
                     message.author.send('you probably have at least one in your house')
                 }else
-                if (userData[sender.id].currentLevel == 4) {
+                if (hintsLeft[sender.id].currentLevel == 4) {
                     message.author.send ('This man was a former roman consul with a puzzle associated with him')
                 }else
                     message.author.send('I also like tacos')
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
             }else
+            if (userData[sender.id].hintsLeft <= 0)
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
                 sender.send ("you have no hints left, so uh. looks like you're on your own for this. :P")
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
