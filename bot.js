@@ -123,7 +123,7 @@ bot.on('message', message => {
             break;
     }
     if (message.channel.id === '391835696287186944'){
-        if (message.author.id !== "270017125815418901"){
+        if (message.author.id !== "391442499115155466"){
             message.delete()
         }
     }
