@@ -90,7 +90,6 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01100101011011100110010001111001011100110110100101110011":
-            message.author.sendMessage("see, I told you it was easy.")
             message.author.send("see, I told you it was easy.", {
                 "files": ["https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip"]
             });
