@@ -171,20 +171,21 @@ bot.on('message', message => {
             }
             userData[sender.id].hintsLeft--;
             if (userData[sender.id].hintsLeft >= 0) {
-                if (userData[sender.id].currentLevel === 1) {
+                if (userData[sender.id].currentLevel == 1) {
                     message.author.send('**cough** *insta*__hexa__ **cough**')
                 }else
-                if (userData[sender.id].currentLevel === 2) {
+                if (userData[sender.id].currentLevel == 2) {
                     message.author.send('if I remember correctly, __socialblade__ may be helpful')
                 }else
-                if (userData[sender.id].currentLevel === 3) {
+                if (userData[sender.id].currentLevel == 3) {
                     message.author.send('you probably have at least one in your house')
                 }else
-                if (userData[sender.id].currentLevel === 4) {
+                if (userData[sender.id].currentLevel == 4) {
                     message.author.send ('This man was a former roman consul with a puzzle associated with him')
                 }
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
             }else
+                message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
                 sender.send ("you have no hints left, so uh. looks like you're on your own for this. :P")
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
                 if (err) console.error(err);
@@ -192,6 +193,7 @@ bot.on('message', message => {
             break;
         case "freehints":
             userData[sender.id].hintsLeft++;
+            message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
     }
     
     //BINARY TRANSLATION
