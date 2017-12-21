@@ -120,7 +120,7 @@ bot.on('message', message => {
                     }
                 }
             });
-            if userData[sender.id] = {
+            userData[sender.id] = {
                 currentLevel: 7
             }
             console.log(message.author.username + " just completed level 6");
