@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "!";
 var fs = require('fs');
-var sender = message.author;
+
 
 var userData = JSON.parse(fs.readFileSync('userData.json', 'utf8'));
 
@@ -12,6 +12,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
+    var sender = message.author;
     if (message.content.toLowerCase === 'mytime') {
         message.reply('your time is');
     } else
