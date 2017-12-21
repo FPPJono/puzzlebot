@@ -91,7 +91,7 @@ bot.on('message', message => {
             break;
         case "01100101011011100110010001111001011100110110100101110011":
             message.author.sendMessage("see, I told you it was easy. now read this text")
-            message.author.sendFile(message, 'https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip');
+            bot.sendFile(message, 'https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip');
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             console.log(message.author.username + " just completed level 8")
             break;
