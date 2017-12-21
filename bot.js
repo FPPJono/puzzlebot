@@ -99,11 +99,15 @@ bot.on('message', message => {
             message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle. Good luck", {
                 "embed": {
                     "image": {
-                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393215996179120140/py_vaza_emkuzs_U_xuwq_taf_fmymxqe_yadq_ftmz_kag.png"
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393222974171381761/dmuznaie.png"
                     }
                 }
             });
             console.log(message.author.username + " just completed level 9")
+            break;
+        case "0111001001100001011010010110111001100010011011110111011101110011"
+            message.author.sendMessage('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
+            console.log(message.author.name + " just completed the whole damn hunt!")
             break;
     }
 });
