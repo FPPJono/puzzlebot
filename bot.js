@@ -96,7 +96,7 @@ bot.on('message', message => {
             console.log(message.author.username + " just completed level 8")
             break;
         case "0110111001101001011000110110010101110100011000010110001101101111":
-            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle, don't forget about julius", {
+            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle. Good luck", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393215996179120140/py_vaza_emkuzs_U_xuwq_taf_fmymxqe_yadq_ftmz_kag.png"
