@@ -44,7 +44,7 @@ bot.on('message', message => {
             console.log(message.author.username + " just completed level 3");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
-        case "011101000110100001100101011101000111001001110101011001010110001001100001011000110110111101101110":
+        case "011101000110100001100101011100100110010101100001011011000110001001100001011000110110111101101110":
             message.author.sendMessage("hm, this should be interesting", {
                 "embed": {
                     "image": {
@@ -108,6 +108,17 @@ bot.on('message', message => {
         case "0111001001100001011010010110111001100010011011110111011101110011"
             message.author.sendMessage('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
             console.log(message.author.name + " just completed the whole damn hunt!")
+            break;
+        case "010100110100100001001010010001000101001101000001":
+            message.author.sendMessage("this is the hardest level, good luck!", {
+                "embed": {
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393118029610745868/lvl7.jpg"
+                    }
+                }
+            });
+            console.log(message.author.username + " just completed level 6");
+            bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
     }
 });
