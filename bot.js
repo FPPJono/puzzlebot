@@ -30,26 +30,26 @@ bot.on('message', message => {
             message.author.addRole(message.author.guild.roles.find("name", "scavengerhunt"))
             break;
         case "start":
-            message.author.sendMessage("Ig see you've decided to join my hunt. this will be *very* easy, good luck!\n**/p/BcyyoI7F8DN/**")
+            message.author.send("Ig see you've decided to join my hunt. this will be *very* easy, good luck!\n**/p/BcyyoI7F8DN/**")
             console.log(message.author.username + " just began the hunt");
             break;
         case "0101010001001010010011100100011101001000":
-            message.author.sendMessage("good job! here's level 2\nhttps://www.youtube.com/watch?v=Hb0Ghb1RQ7M")
+            message.author.send("good job! here's level 2\nhttps://www.youtube.com/watch?v=Hb0Ghb1RQ7M")
             console.log(message.author.username + " just completed level 1");
             break;
         case "011101000110100001100101011100000110100101100011011010110110110001100101011001000110100101100100001110010011000100110001":
-            message.author.sendMessage("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
+            message.author.send("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
             console.log(message.author.username + " just completed level 2");
             break;
     }
     switch (args[0].toLowerCase()) {
         case "011101110110100101101110011001000110111101110111":
-            message.author.sendMessage("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
+            message.author.send("lets go back to the beginning, may not be lvl 10 yet, but I think this'll be fine ;)\nAOLAYBLIHJVU")
             console.log(message.author.username + " just completed level 3");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "011101000110100001100101011100100110010101100001011011000110001001100001011000110110111101101110":
-            message.author.sendMessage("hm, this should be interesting", {
+            message.author.send("hm, this should be interesting", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393114450606948352/passage534.png"
@@ -60,7 +60,7 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "010101000100100001000101010101000101001001010101010001010100001001000001010000110100111101001110":
-            message.author.sendMessage("hm, this should be interesting", {
+            message.author.send("hm, this should be interesting", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393114450606948352/passage534.png"
@@ -71,12 +71,12 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01110000011000010111001101110011011000010110011101100101001101010011001100110100":
-            message.author.sendMessage("aaa aaaa abbb baa aaa ab")
+            message.author.send("aaa aaaa abbb baa aaa ab")
             console.log(message.author.username + " just completed level 5");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;       
         case "011100110110100001101010011001000111001101100001":
-            message.author.sendMessage("this is the hardest level, good luck!", {
+            message.author.send("this is the hardest level, good luck!", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393118029610745868/lvl7.jpg"
@@ -89,7 +89,7 @@ bot.on('message', message => {
     }
     switch (args[0].toLowerCase()) {
         case "01110011011101000111001001100001011101110110001001100101011100100111001001111001":
-            message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
+            message.author.send ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
             console.log(message.author.username + " just completed level 7");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
@@ -101,7 +101,7 @@ bot.on('message', message => {
             console.log(message.author.username + " just completed level 8")
             break;
         case "0110111001101001011000110110010101110100011000010110001101101111":
-            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle. Good luck", {
+            message.author.send("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle. Good luck", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393222974171381761/dmuznaie.png"
@@ -111,11 +111,11 @@ bot.on('message', message => {
             console.log(message.author.username + " just completed level 9")
             break;
         case "0111001001100001011010010110111001100010011011110111011101110011":
-            message.author.sendMessage('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
+            message.author.send('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
             console.log(message.author.username + " just completed the whole damn hunt!")
             break;
         case "010100110100100001001010010001000101001101000001":
-            message.author.sendMessage("this is the hardest level, good luck!", {
+            message.author.send("this is the hardest level, good luck!", {
                 "embed": {
                     "image": {
                         "url": "https://cdn.discordapp.com/attachments/391482844414738432/393118029610745868/lvl7.jpg"
@@ -137,6 +137,11 @@ bot.on('message', message => {
                 hintsLeft: 3
             }
             userData[sender.id].hintsLeft--;
+            if (userData[sender.id].hintsLeft >= 0) {
+                message.author.send ('yeet')
+            }else
+                sender.send ('you have no hints left')
+            message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
                 if (err) console.error(err);
             });
