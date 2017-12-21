@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const PREFIX = "!";
+var fs = require('fs');
+
+var userData = JSON.parse(fs.readFileSync('userData.json', 'utf8'));
 
 bot.on('ready', () => {
     console.log('I am ready!')
@@ -16,8 +19,10 @@ bot.on('message', message => {
     } else
     if (!message.content.startsWith(PREFIX)) return;
     
+    //allows custom commands
     var args = message.content.substring(PREFIX.length).split(" ");
     
+    // MAIN HUNT CODE
     switch (args[0].toLowerCase()) {
         case "scavengerhunt":
             message.author.addRole(message.author.guild.roles.find("name", "scavengerhunt"))
@@ -33,9 +38,6 @@ bot.on('message', message => {
         case "011101000110100001100101011100000110100101100011011010110110110001100101011001000110100101100100001110010011000100110001":
             message.author.sendMessage("had enough of decoding? Good, I have a riddle for you. \nWhat invention allows you to look right through a wall?")
             console.log(message.author.username + " just completed level 2");
-            break;
-        case "hint":
-            message.author.sendMessage("this will work eventually :P")
             break;
     }
     switch (args[0].toLowerCase()) {
@@ -90,7 +92,7 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01100101011011100110010001111001011100110110100101110011":
-            message.author.send("see, I told you it was easy.", {
+            message.author.send("see, I told you it was easy. now read this text", {
                 "files": ["https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip"]
             });
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
@@ -122,6 +124,23 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
     }
+    
+    //HINT SYSTEM
+    switch (args[0].toLowerCase()) {
+        case "hint":
+            if (!userData[sender.id]) userData[sender.id] = {
+                hintsLeft: 3
+            }
+            userData[sender.id].hintsLeft--;
+            fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
+                if (err) console.error(err);
+            });
+            break;
+    }
+    
+    //BINARY TRANSLATION
+    
+    //autodelete
     if (message.channel.id === '391835696287186944'){
         if (message.author.id !== "391442499115155466"){
             message.delete()
