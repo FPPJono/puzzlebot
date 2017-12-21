@@ -90,8 +90,10 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01100101011011100110010001111001011100110110100101110011":
-            message.author.sendMessage("see, I told you it was easy. now read this text")
-            bot.sendFile(message, 'https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip');
+            message.author.sendMessage("see, I told you it was easy.")
+            bot.sendFile(message, 'https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip', 'lvl9.zip', "now read this text", (err, m) => {
+                    if (err) console.log(err);
+            });
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             console.log(message.author.username + " just completed level 8")
             break;
@@ -107,7 +109,7 @@ bot.on('message', message => {
             break;
         case "0111001001100001011010010110111001100010011011110111011101110011":
             message.author.sendMessage('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
-            console.log(message.author.name + " just completed the whole damn hunt!")
+            console.log(message.author.username + " just completed the whole damn hunt!")
             break;
         case "010100110100100001001010010001000101001101000001":
             message.author.sendMessage("this is the hardest level, good luck!", {
