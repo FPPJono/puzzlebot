@@ -120,6 +120,9 @@ bot.on('message', message => {
                     }
                 }
             });
+            if userData[sender.id] = {
+                currentLevel: 7
+            }
             console.log(message.author.username + " just completed level 6");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
