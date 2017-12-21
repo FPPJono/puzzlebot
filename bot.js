@@ -182,7 +182,8 @@ bot.on('message', message => {
                 }else
                 if (userData[sender.id].currentLevel == 4) {
                     message.author.send ('This man was a former roman consul with a puzzle associated with him')
-                }
+                }else
+                    message.author.send('I also like tacos')
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
             }else
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
@@ -192,7 +193,9 @@ bot.on('message', message => {
             });
             break;
         case "freehints":
-            userData[sender.id].hintsLeft++;
+            userData[sender.id] = {
+                hintsLeft: 10
+            }
             message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
     }
     
