@@ -90,16 +90,24 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01100101011011100110010001111001011100110110100101110011":
-            message.author.sendMessage("see, I told you it was easy. now read this .txt", {
+            message.author.sendMessage("see, I told you it was easy. now read this text", {
                 "embed": {
-                    "image": {
-                        "url": ""
+                    "file": {
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393206635188715530/lvl8.zip"
                     }
                 }
             });
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             console.log(message.author.username + "just completed level 8")
             break;
+        case "0110111001101001011000110110010101110100011000010110001101101111":
+            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle", {
+                "embed": {
+                    "file": {
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393206635188715530/lvl8.zip"
+                    }
+                }
+            });
     }
 });
 
