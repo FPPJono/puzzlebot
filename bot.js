@@ -122,7 +122,13 @@ bot.on('message', message => {
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
     }
+    if (message.channel.id === '391835696287186944'){
+        if (message.author.id !== "270017125815418901"){
+            message.delete()
+        }
+    }
 });
+
 
 bot.login(process.env.BOT_TOKEN);
 
