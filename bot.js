@@ -86,28 +86,25 @@ bot.on('message', message => {
     switch (args[0].toLowerCase()) {
         case "01110011011101000111001001100001011101110110001001100101011100100111001001111001":
             message.author.sendMessage ("congrats, you solved the hardest puzzle in the game, heres an easy one\n**__I want to play a game__**")
-            console.log(message.author.username + "just completed level 7");
+            console.log(message.author.username + " just completed level 7");
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
             break;
         case "01100101011011100110010001111001011100110110100101110011":
-            message.author.sendMessage("see, I told you it was easy. now read this text", {
-                "embed": {
-                    "file": {
-                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393206635188715530/lvl8.zip"
-                    }
-                }
-            });
+            message.author.sendMessage("see, I told you it was easy. now read this text")
+            message.author.sendFile(message, 'https://cdn.discordapp.com/attachments/391482844414738432/393214243995910146/lvl9.zip');
             bot.user.setPresence({ game: { name: 'endysis', type: 0 } });
-            console.log(message.author.username + "just completed level 8")
+            console.log(message.author.username + " just completed level 8")
             break;
         case "0110111001101001011000110110010101110100011000010110001101101111":
-            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle", {
+            message.author.sendMessage("congrats! you've made it to the final level. good Job! this is something very few people achieve\nheres your **final** puzzle, don't forget about julius", {
                 "embed": {
-                    "file": {
-                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393206635188715530/lvl8.zip"
+                    "image": {
+                        "url": "https://cdn.discordapp.com/attachments/391482844414738432/393215996179120140/py_vaza_emkuzs_U_xuwq_taf_fmymxqe_yadq_ftmz_kag.png"
                     }
                 }
             });
+            console.log(message.author.username + " just completed level 9")
+            break;
     }
 });
 
