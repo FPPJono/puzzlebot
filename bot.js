@@ -176,7 +176,7 @@ bot.on('message', message => {
             userData[sender.id].hintsLeft--;
             if (userData[sender.id].hintsLeft >= 0) {
                 if (hintsLeft[sender.id].currentLevel == 1) {
-                    message.author.send('**cough** *insta*__hexa__ **cough**')
+                    message.author.send('**cough** **insta**__hexa__ **cough**')
                 }else
                 if (hintsLeft[sender.id].currentLevel == 2) {
                     message.author.send('if I remember correctly, __socialblade__ may be helpful')
@@ -187,10 +187,32 @@ bot.on('message', message => {
                 if (hintsLeft[sender.id].currentLevel == 4) {
                     message.author.send ('This man was a former roman consul with a puzzle associated with him')
                 }else
+                if (hintsLeft[sender.id].currentLevel == 5) {
+                    sender.send ('the picture is irrelevant')
+                }else
+                if (hintsLeft[sender.id].currentLevel == 6) {
+                    sender.send ('I wonder what would happen if I changed out the letters for dots and dashes')
+                }else
+                if (hintsLeft[sender.id].currentLevel == 7) {
+                    sender.send("this file is bigger than it should be, I wonder if it's hiding another file :thinking:")
+                }else
+                if (hintsLeft[sender.id].currentLevel == 8) {
+                    sender.send('sorry, I started playing it without you')
+                }else
+                if (hintsLeft[sender.id].currentLevel == 9) {
+                    sender.send ("remember what ya did for lvl 7? do that again, but with a different file type")
+                }else
+                if (hintsLeft[sender.id].currentLevel == 10) {
+                    sender.send('"R_ND 10: JULIUS" ~instagram post. "the picture is irrelevant" ~hint for lvl5.')
+                }
                     message.author.send('I also like tacos')
-                message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
+                if (userData[sender.id].hintsLeft > 0){
+                    message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
+                }else
+                    sender.send ('you have now used all of your hints. have fun solving the rest of this yourself')
+
             }else
-            if (userData[sender.id].hintsLeft <= 0)
+            if (userData[sender.id].hintsLeft < 0)
                 message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
                 sender.send ("you have no hints left, so uh. looks like you're on your own for this. :P")
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
