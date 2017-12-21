@@ -205,16 +205,14 @@ bot.on('message', message => {
                 if (hintsLeft[sender.id].currentLevel == 10) {
                     sender.send('"R_ND 10: JULIUS" ~instagram post. "the picture is irrelevant" ~hint for lvl5.')
                 }
-                    message.author.send('I also like tacos')
                 if (userData[sender.id].hintsLeft > 0){
                     message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
                 }else
                     sender.send ('you have now used all of your hints. have fun solving the rest of this yourself')
-
             }else
-            if (userData[sender.id].hintsLeft < 0)
-                message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
+            if (userData[sender.id].hintsLeft < 0) {
                 sender.send ("you have no hints left, so uh. looks like you're on your own for this. :P")
+            }
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
                 if (err) console.error(err);
             });
