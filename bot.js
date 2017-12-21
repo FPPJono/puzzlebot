@@ -190,6 +190,8 @@ bot.on('message', message => {
                 if (err) console.error(err);
             });
             break;
+        case "freehints":
+            userData[sender.id].hintsLeft++;
     }
     
     //BINARY TRANSLATION
