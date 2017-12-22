@@ -225,9 +225,8 @@ bot.on('message', message => {
             message.author.send ("that command is for the bot creator only, sorry")
         }else
         if (message.author.id === "270017125815418901") {
-            const embed = new Discord.RichEmbed()
-            .setDescription(args.join(" "));
-            announcement.send({embed})
+            let content = args.join(" ")
+            message.author.sendMessage(content)
         }
     }
     //BINARY TRANSLATION
