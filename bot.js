@@ -219,16 +219,25 @@ bot.on('message', message => {
                 if (err) console.error(err);
             });
             break;
-        case "announce":
+    }
+    if message.content.startsWith(PREFIX + "announce") {
+        if (message.author.id !== "270017125815418901") {
+            message.author.send ("that command is for the bot creator only, sorry")
+        }else
+        if (message.author.id === "270017125815418901") {
             let content = args.join (" ")
             announcement.sendMessage(content)
-            break;
-        case "playing":
+        }
+    }
+    if message.content.startsWith(PREFIX + "playing") {
+        if (message.author.id !== "270017125815418901") {
+            message.author.send ("that command is for the bot creator only, sorry")
+        }else
+        if (message.author.id === "270017125815418901") {
             let game = args.join (" ")
             bot.user.setPresence({ game: { name: game, type: 0 } });
-            break;
+        }
     }
-    
     //BINARY TRANSLATION
     
     
