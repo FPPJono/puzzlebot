@@ -219,11 +219,6 @@ bot.on('message', message => {
                 if (err) console.error(err);
             });
             break;
-        case "freehints":
-            userData[sender.id] = {
-                hintsLeft: 10
-            }
-            message.author.send('You have ' + userData[sender.id].hintsLeft + ' hints remaining.')
     }
     
     //BINARY TRANSLATION
