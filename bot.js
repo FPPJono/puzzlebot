@@ -226,7 +226,7 @@ bot.on('message', message => {
         }else
         if (message.author.id === "270017125815418901") {
             let content = args.join(" ")
-            message.author.sendMessage(content)
+            announcement.send(content)
         }
     }
     //BINARY TRANSLATION
