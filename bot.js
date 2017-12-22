@@ -148,7 +148,7 @@ bot.on('message', message => {
         case "0111001001100001011010010110111001100010011011110111011101110011":
             message.author.send('Congrats! you completed it\nIf you want to give any feedback, feel free to DM jono saying what could be improved for next time\nYour prize will be given to you once the event is fully over :)')
             console.log(message.author.username + " just completed the whole damn hunt!")
-            announcement.sendMessage("@" + message.author.username + " just completed the whole dang hunt!")
+            announcement.sendMessage(message.author.username + " just completed the whole dang hunt!")
             break;
         case "010100110100100001001010010001000101001101000001":
             message.author.send("this is the hardest level, good luck!", {
