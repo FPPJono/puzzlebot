@@ -225,17 +225,10 @@ bot.on('message', message => {
             message.author.send ("that command is for the bot creator only, sorry")
         }else
         if (message.author.id === "270017125815418901") {
-            let content = args.join (" ")
-            announcement.sendMessage(content)
-        }
-    }
-    if (message.content.startsWith(PREFIX + "playing")) {
-        if (message.author.id !== "270017125815418901") {
-            message.author.send ("that command is for the bot creator only, sorry")
-        }else
-        if (message.author.id === "270017125815418901") {
-            let game = args.join (" ")
-            bot.user.setPresence({ game: { name: game, type: 0 } });
+            const embed = new Discord.RichEmbed()
+            .setDescription(args.join(" "));
+            announcement.send("@FPPJono")
+            announcement.send({embed})
         }
     }
     //BINARY TRANSLATION
