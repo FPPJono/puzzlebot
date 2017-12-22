@@ -227,7 +227,6 @@ bot.on('message', message => {
         if (message.author.id === "270017125815418901") {
             const embed = new Discord.RichEmbed()
             .setDescription(args.join(" "));
-            announcement.send("@FPPJono")
             announcement.send({embed})
         }
     }
