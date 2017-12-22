@@ -219,9 +219,19 @@ bot.on('message', message => {
                 if (err) console.error(err);
             });
             break;
+        case "announce":
+            let content = args.join (" ")
+            announcement.sendMessage(content)
+            break;
+        case "playing":
+            let game = args.join (" ")
+            bot.user.setPresence({ game: { name: game, type: 0 } });
+            break;
     }
     
     //BINARY TRANSLATION
+    
+    
     
     //autodelete
     if (message.channel.id === '391835696287186944'){
