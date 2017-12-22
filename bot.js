@@ -220,7 +220,7 @@ bot.on('message', message => {
             });
             break;
     }
-    if message.content.startsWith(PREFIX + "announce") {
+    if (message.content.startsWith(PREFIX + "announce")) {
         if (message.author.id !== "270017125815418901") {
             message.author.send ("that command is for the bot creator only, sorry")
         }else
@@ -229,7 +229,7 @@ bot.on('message', message => {
             announcement.sendMessage(content)
         }
     }
-    if message.content.startsWith(PREFIX + "playing") {
+    if (message.content.startsWith(PREFIX + "playing")) {
         if (message.author.id !== "270017125815418901") {
             message.author.send ("that command is for the bot creator only, sorry")
         }else
