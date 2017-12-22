@@ -24,6 +24,7 @@ bot.on('message', message => {
     
     //allows custom commands
     var args = message.content.substring(PREFIX.length).split(" ");
+    var announcement = bot.channels.find("name", "event-announcements");
     
     // MAIN HUNT CODE
     switch (args[0].toLowerCase()) {
@@ -147,6 +148,7 @@ bot.on('message', message => {
         case "0111001001100001011010010110111001100010011011110111011101110011":
             message.author.send('Congrats! you completed it\nDM Jono **__"I like hot tamales more than you"__** so he can add you to the list of winners')
             console.log(message.author.username + " just completed the whole damn hunt!")
+            announcement.sendMessage(message.author.username + "just completed the whole dang hunt!")
             break;
         case "010100110100100001001010010001000101001101000001":
             message.author.send("this is the hardest level, good luck!", {
