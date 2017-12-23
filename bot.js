@@ -145,7 +145,7 @@ bot.on('message', message => {
             }
             console.log(message.author.username + " just completed level 9")
             break;
-        case "0111001001100001011010010110111001100010011011110111011101110011":
+        case "0101001001000001010010010100111001000010010011110101011101010011":
             message.author.send('Congrats! you completed it\nIf you want to give any feedback, feel free to DM jono saying what could be improved for next time\nYour prize will be given to you once the event is fully over :)')
             console.log(message.author.username + " just completed the whole damn hunt!")
             announcement.sendMessage(message.author.username + " just completed the whole dang hunt!")
