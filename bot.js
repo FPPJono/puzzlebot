@@ -148,7 +148,7 @@ bot.on('message', message => {
         case "0101001001000001010010010100111001000010010011110101011101010011":
             message.author.send('Congrats! you completed it\nIf you want to give any feedback, feel free to DM jono saying what could be improved for next time\nYour prize will be given to you once the event is fully over :)')
             console.log(message.author.username + " just completed the whole damn hunt!")
-            announcement.sendMessage(message.author.username + " just completed the whole dang hunt!")
+            announcement.send(message.author.username + " just completed the whole dang hunt!")
             break;
         case "010100110100100001001010010001000101001101000001":
             message.author.send("this is the hardest level, good luck!", {
@@ -177,6 +177,7 @@ bot.on('message', message => {
             }
             userData[sender.id].hintsLeft--;
             if (userData[sender.id].hintsLeft >= 0) {
+                console.log(message.author.username + " just used a hint on level " + hintsLeft[sender.id].currentLevel + " they now have " + userData[sender.id].hintsLeft + " hints remaining")
                 if (hintsLeft[sender.id].currentLevel == 1) {
                     message.author.send('**cough** **insta**__hexa__ **cough**')
                 }else
@@ -213,6 +214,7 @@ bot.on('message', message => {
                     sender.send ('you have now used all of your hints. have fun solving the rest of this yourself')
             }else
             if (userData[sender.id].hintsLeft < 0) {
+                console.log(message.author.username + " just tried to use a hint but they have none, what a loser")
                 sender.send ("you have no hints left, so uh. looks like you're on your own for this. :P")
             }
             fs.writeFile('userData.json', JSON.stringify(userData), (err) => {
