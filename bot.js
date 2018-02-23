@@ -228,6 +228,7 @@ bot.on('message', message => {
         }else
             if (message.author.id === "270017125815418901") {
                 let content = args.join(" ")
+                content.replace('announce', '');
                 announcement.send(content)
         }
     }
