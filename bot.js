@@ -222,20 +222,7 @@ bot.on('message', message => {
             });
             break;
     }
-    
-    //announcement code which should realistically be on a different bot altogether
-    if (message.content.startsWith(PREFIX + "announce")) {
-         if (message.member.roles.has("269993616456417280")) {
-            let content = args.join(" ")
-            var useContent = content.substr(9);
-            announcement.send(useContent)
-        }else
-            message.author.send("sorry, that command is for admins only")
-    }
-    //BINARY TRANSLATION
-    
-    
-    
+
     //autodelete
     if (message.channel.id === '391835696287186944'){
         if (message.author.id !== "391442499115155466"){
