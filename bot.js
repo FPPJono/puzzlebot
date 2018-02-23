@@ -223,7 +223,7 @@ bot.on('message', message => {
             break;
     }
     if (message.content.startsWith(PREFIX + "announce")) {
-         if (message.member.roles.has("name", "The Elder Pigs")) {
+         if (message.member.roles.has("269993616456417280")) {
             let content = args.join(" ")
             var useContent = content.substr(9);
             announcement.send(useContent)
