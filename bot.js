@@ -24,7 +24,7 @@ bot.on('message', message => {
     
     //allows custom commands
     var args = message.content.substring(PREFIX.length).split(" ");
-    var announcement = bot.channels.find("name", "event-announcements");
+    var announcement = bot.channels.find("name", "announcements");
     
     // MAIN HUNT CODE
     switch (args[0].toLowerCase()) {
