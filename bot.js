@@ -228,8 +228,8 @@ bot.on('message', message => {
         }else
             if (message.author.id === "270017125815418901") {
                 let content = args.join(" ")
-                var content = content.substr(1);
-                announcement.send(content)
+                var useContent = content.substr(1);
+                announcement.send(useContent)
         }
     }
     //BINARY TRANSLATION
