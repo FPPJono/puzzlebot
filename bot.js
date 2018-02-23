@@ -229,7 +229,6 @@ bot.on('message', message => {
             announcement.send(useContent)
         }else
             message.author.send("sorry, that command is for admins only")
-        }
     }
     //BINARY TRANSLATION
     
