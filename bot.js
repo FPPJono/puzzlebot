@@ -222,6 +222,8 @@ bot.on('message', message => {
             });
             break;
     }
+    
+    //announcement code which should realistically be on a different bot altogether
     if (message.content.startsWith(PREFIX + "announce")) {
          if (message.member.roles.has("269993616456417280")) {
             let content = args.join(" ")
