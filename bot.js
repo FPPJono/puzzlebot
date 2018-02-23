@@ -226,9 +226,9 @@ bot.on('message', message => {
         if (message.author.id !== "270017125815418901") {
             message.author.send ("that command is for the bot creator only, sorry")
         }else
-        if (message.author.id === "270017125815418901") {
-            let content = args.join(" ")
-            announcement.send(content)
+            if (message.author.id === "270017125815418901") {
+                let content = args.join(" ")
+                announcement.send(content)
         }
     }
     //BINARY TRANSLATION
