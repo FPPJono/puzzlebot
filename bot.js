@@ -223,13 +223,12 @@ bot.on('message', message => {
             break;
     }
     if (message.content.startsWith(PREFIX + "announce")) {
-        if (message.author.id !== "270017125815418901") {
-            message.author.send ("that command is for the bot creator only, sorry")
+         if (message.member.roles.has(416671114228662282)) {
+            let content = args.join(" ")
+            var useContent = content.substr(9);
+            announcement.send(useContent)
         }else
-            if (message.author.id === "270017125815418901") {
-                let content = args.join(" ")
-                var useContent = content.substr(9);
-                announcement.send(useContent)
+            message.author.send("sorry, that command is for admins only")
         }
     }
     //BINARY TRANSLATION
