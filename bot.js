@@ -232,7 +232,7 @@ bot.on('message', message => {
 });
 
 
-bot.login(process.env.BOT_TOKEN);
+bot.login('MzkxNDQyNDk5MTE1MTU1NDY2.DYJHeg.Nz30TFr5fIzdRi4fcUKsONTIiSI');
 
     
     //member.addRole(member.guild.roles.find("name", "INSERTNAMEOFROLE"))
